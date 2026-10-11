@@ -2,7 +2,10 @@
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Signature Stay Cleaning — site preview</title>
+<title>Signature Stay Cleaning | Northern Virginia</title>
+<meta name="description" content="Hospitality-inspired cleaning for homes, Airbnb hosts, businesses, and events across Northern Virginia. Personalized quotes from Signature Stay Cleaning.">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
@@ -501,10 +504,6 @@ legend{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(
 .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
 
 .pv-page{display:none}.pv-page.is-on{display:block}
-.pv-bar{position:fixed;right:14px;bottom:14px;z-index:400;background:#0A2B21;color:#DCD3BB;border:1px solid #B08D46;padding:9px 15px;font:400 11px/1.4 Jost,sans-serif;letter-spacing:.14em;text-transform:uppercase;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}
-.pv-bar a{color:#C9A44C;cursor:pointer}.pv-bar a.on{color:#FDFBF5;text-decoration:underline}
-@media (max-width:960px){.pv-bar{bottom:calc(64px + env(safe-area-inset-bottom,0px));right:10px}}
-.pv-sent{background:#FCF7EC;border:1px solid #B08D46;padding:18px;grid-column:1/-1;font:300 14px/1.7 Jost,sans-serif;color:#57574E}
 </style>
 </head><body>
 <div class="pv-page is-on" data-name="home"><header class="site-header" id="siteHeader">
@@ -846,7 +845,7 @@ legend{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(
         <input type="hidden" name="_subject" value="New quote request — cleanwithsignature.com">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://kaylastan.github.io/SignatureStay/thank-you.html">
+        <input type="hidden" name="_next" value="https://www.cleanwithsignature.com/thank-you.html">
         <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <label class="f">
@@ -1255,7 +1254,7 @@ legend{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(
         <input type="hidden" name="_subject" value="New cleaning technician application">
         <input type="hidden" name="_template" value="table">
         <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://kaylastan.github.io/SignatureStay/thank-you.html">
+        <input type="hidden" name="_next" value="https://www.cleanwithsignature.com/thank-you.html">
         <input type="text" name="_honey" class="visually-hidden" tabindex="-1" autocomplete="off" aria-hidden="true">
 
         <label class="f">
@@ -1458,7 +1457,7 @@ legend{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(
   <a href="tel:+15713903956">Call or Text</a>
   <a href="#apply">Apply Now</a>
 </div></div>
-<div class="pv-bar"><span style="color:#7E9187">Preview</span><a data-page="home" class="on">Home</a><a data-page="gallery">Our Work</a><a data-page="careers">Careers</a></div><script>(function(){var n=document.getElementById.bind(document);document.getElementById=function(id){var l=document.querySelector('.pv-page.is-on');if(l){var i=l.querySelector('[id="'+id+'"]');if(i)return i;}return n(id);};})();</script><script>
+<script>(function(){var n=document.getElementById.bind(document);document.getElementById=function(id){var l=document.querySelector('.pv-page.is-on');if(l){var i=l.querySelector('[id="'+id+'"]');if(i)return i;}return n(id);};})();</script><script>
 (function(){
   /* Mobile menu */
   var header = document.getElementById('siteHeader');
@@ -1653,19 +1652,18 @@ legend{font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(
 })();
 </script><script>
 (function(){
- function show(p,a){
+ function show(p,a,push){
   document.querySelectorAll('.pv-page').forEach(function(x){x.classList.toggle('is-on',x.dataset.name===p);});
-  document.querySelectorAll('.pv-bar a').forEach(function(x){x.classList.toggle('on',x.dataset.page===p);});
+  if(push!==false&&history.pushState){var h=p==='home'?(a?'#'+a:location.pathname):'#'+p;if(location.hash!==h)history.pushState({p:p},'',h);}
   window.scrollTo(0,0);
   if(a){requestAnimationFrame(function(){
    var l=document.querySelector('.pv-page.is-on');var t=l&&l.querySelector('[id="'+a+'"]');var h=l&&l.querySelector('.site-header');
    if(t)window.scrollTo({top:Math.max(0,t.getBoundingClientRect().top+window.pageYOffset-(h?h.offsetHeight:0)-12),behavior:'smooth'});});}
  }
  document.addEventListener('click',function(e){var el=e.target.closest('[data-page]');if(!el)return;e.preventDefault();show(el.dataset.page,el.dataset.anchor);});
- document.querySelectorAll('form').forEach(function(f){f.addEventListener('submit',function(e){
-  e.preventDefault();var m=f.querySelector('.pv-sent')||document.createElement('div');m.className='pv-sent';
-  m.textContent='Preview only \u2014 nothing was sent. On the live site this goes to SignatureStayNOVA@gmail.com and the visitor lands on the thank-you page.';
-  f.appendChild(m);m.scrollIntoView({block:'center'});});});
+ function fromHash(){var h=location.hash.slice(1);if(h==='gallery'||h==='careers')show(h,null,false);else if(document.querySelector('.pv-page.is-on').dataset.name!=='home'){show('home',h||null,false);}}
+ window.addEventListener('popstate',fromHash);
+ fromHash();
 })();
 </script>
 </body></html>
