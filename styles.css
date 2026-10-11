@@ -234,9 +234,9 @@ p{text-wrap:pretty;}
   display:flex;flex-direction:column;scroll-margin-top:110px;
 }
 .service-card:hover{border-color:var(--gold);}
-.service-photo{position:relative;height:176px;overflow:hidden;}
+.service-photo{position:relative;height:210px;overflow:hidden;}
 .service-photo img{width:100%;height:100%;object-fit:cover;}
-#svc-residential .service-photo img{object-position:center top;}
+#svc-residential .service-photo img{object-position:60% 35%;}
 .service-mark{
   position:absolute;left:50%;bottom:-21px;transform:translateX(-50%);
   width:42px;height:42px;border-radius:50%;background:var(--green-800);
