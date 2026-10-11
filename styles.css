@@ -237,7 +237,7 @@ p{text-wrap:pretty;}
 .service-photo{position:relative;height:210px;overflow:hidden;}
 .service-photo img{width:100%;height:100%;object-fit:cover;}
 #svc-residential .service-photo img{object-position:60% 35%;}
-#svc-airbnb .service-photo img{object-position:70% center;}
+#svc-airbnb .service-photo img{object-position:50% 20%;}
 .service-mark{
   position:absolute;left:50%;bottom:-21px;transform:translateX(-50%);
   width:42px;height:42px;border-radius:50%;background:var(--green-800);
